@@ -24,7 +24,12 @@ public class SessionController {
     // Iniciar sesión
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody User user) {
-        boolean loggedIn = userService.login(user.getName(), user.getPassword()); // Usar el nombre y la contraseña
+        boolean loggedIn = userService.login(user.getName
+
+
+
+
+                (), user.getPassword()); // Usar el nombre y la contraseña
         if (loggedIn) {
             return ResponseEntity.ok("Inicio de sesión exitoso");
         } else {

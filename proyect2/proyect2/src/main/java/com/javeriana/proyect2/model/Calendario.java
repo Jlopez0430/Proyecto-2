@@ -5,28 +5,24 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.data.annotation.Id;
-
-
 
 @Entity
-@Data // Esto es opcional pueden usarlo o crear los getter y setters
+@Data // Esto es opcional, pueden usarlo o crear los getter y setters
 @NoArgsConstructor
 public class Calendario {
 
     @Getter
     @Setter
-    @jakarta.persistence.Id
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id // Solo una vez
+    private Long id; // El id no es autogenerado
 
-    private Long id;
     private String name;
     private String descripcion;
     private String fecha;
     private String hora;
     private String importancia;
 
+    // Métodos set y get, aunque se pueden omitir con @Data
     public void setId(Long id) {
         this.id = id;
     }
@@ -74,5 +70,4 @@ public class Calendario {
     public String getImportancia() {
         return importancia;
     }
-
 }
