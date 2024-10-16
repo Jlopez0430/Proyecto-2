@@ -7,8 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 
 @Entity
@@ -21,11 +19,11 @@ public class Calendario {
     @jakarta.persistence.Id
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");  // Formato: Año-Mes-Día Hora:Minuto:Segund
+
     private Long id;
     private String name;
     private String descripcion;
-    private Date fecha;
+    private String fecha;
     private String hora;
     private String importancia;
 
@@ -41,7 +39,7 @@ public class Calendario {
         this.descripcion = descripcion;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -65,7 +63,7 @@ public class Calendario {
         return descripcion;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
