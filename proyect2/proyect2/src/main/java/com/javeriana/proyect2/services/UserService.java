@@ -2,17 +2,24 @@ package com.javeriana.proyect2.services;
 
 import com.javeriana.proyect2.model.User;
 import com.javeriana.proyect2.model.UserListManager;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
 
     private final UserListManager userListManager;
+    private final SessionManager sessionManager;
 
-    public UserService() {
-        this.userListManager = new UserListManager(); // Inicializamos el gestor de usuarios
+    @Autowired
+    public UserService(SessionManager sessionManager) {
+        this.userListManager = new UserListManager();
+        this.sessionManager = sessionManager;
     }
 
     public User createUser(User user) {
@@ -50,5 +57,18 @@ public class UserService {
             userListManager.getAllUsers().remove(user);
         }
     }
-}
 
+    // Método para iniciar sesión
+    public boolean login(String name, String password) {
+        User user = userListManager.getUserByName(name);
+        if (user != null && user.getPassword().equals(password)) {
+            sessionManager.login(user);  // Guardamos el usuario en sesión
+            return true;
+        }
+        return false;
+    }
+
+    public void logout() {
+        sessionManager.logout();
+    }
+}

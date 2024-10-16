@@ -31,6 +31,4 @@ public class    User {
         this.name = name;
     }
 
-    // Getter y Setter para 'location'
-
 }
