@@ -11,10 +11,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Calendario {
 
-    @Getter
-    @Setter
-    @Id // Solo una vez
-    private Long id; // El id no es autogenerado
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String name;
     private String descripcion;
@@ -22,10 +21,9 @@ public class Calendario {
     private String hora;
     private String importancia;
 
-    // Métodos set y get, aunque se pueden omitir con @Data
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public void setName(String name) {
         this.name = name;

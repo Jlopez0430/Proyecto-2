@@ -1,9 +1,9 @@
 package com.javeriana.proyect2.services;
 
 import com.javeriana.proyect2.model.Calendario;
+import com.javeriana.proyect2.model.User;
 import com.javeriana.proyect2.repository.CalendarioRepository;
 import com.javeriana.proyect2.repository.UserRepository;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +34,8 @@ public class CalendarioService {
             throw new Exception("Debe iniciar sesión antes de crear un calendario.");
         }
 
+        User user = sessionManager.getUser();
+        user.addCalendario(calendario);
         // Si está logueado, guardar el calendario
         return calendarioRepository.save(calendario);
     }

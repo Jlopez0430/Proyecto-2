@@ -1,7 +1,9 @@
 package com.javeriana.proyect2.services;
 
+import com.javeriana.proyect2.model.Calendario;
 import com.javeriana.proyect2.model.User;
 import com.javeriana.proyect2.model.UserListManager;
+import com.javeriana.proyect2.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,11 +17,13 @@ public class UserService {
 
     private final UserListManager userListManager;
     private final SessionManager sessionManager;
+    private final UserRepository userRepository;
 
     @Autowired
-    public UserService(SessionManager sessionManager) {
+    public UserService(SessionManager sessionManager, UserRepository userRepository) {
         this.userListManager = new UserListManager();
         this.sessionManager = sessionManager;
+        this.userRepository = userRepository;
     }
 
     public User createUser(User user) {
@@ -27,7 +31,7 @@ public class UserService {
         if (!userAdded) {
             throw new IllegalArgumentException("El usuario ya está creado con ese nombre o email.");
         }
-        return user;
+        return userRepository.save(user);
     }
 
     public List<User> getAllUser() {
@@ -71,4 +75,16 @@ public class UserService {
     public void logout() {
         sessionManager.logout();
     }
+
+    public List<Calendario> getCalendariosByUserId(Long userId) {
+        User user = getUserById(userId);
+        if (user != null) {
+            return user.getCalendarios();
+        } else {
+            throw new IllegalArgumentException("Usuario no encontrado.");
+        }
+    }
+
+
+
 }

@@ -24,4 +24,8 @@ public class SessionManager {
     public boolean isLoggedIn() {
         return this.loggedInUser != null;
     }
+
+    public User getUser() {
+        return loggedInUser;
+    }
 }

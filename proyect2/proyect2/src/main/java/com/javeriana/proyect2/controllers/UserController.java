@@ -1,5 +1,6 @@
 package com.javeriana.proyect2.controllers;
 
+import com.javeriana.proyect2.model.Calendario;
 import com.javeriana.proyect2.model.User;
 import com.javeriana.proyect2.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +57,16 @@ public class UserController {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/{id}/calendarios")
+    public ResponseEntity<List<Calendario>> getCalendariosByUserId(@PathVariable Long id) {
+        try {
+            List<Calendario> calendarios = userService.getCalendariosByUserId(id);
+            return ResponseEntity.ok(calendarios);
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+    }
+
 }
 
