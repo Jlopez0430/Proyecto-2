@@ -25,8 +25,7 @@ public class CalendarioController {
             Calendario newCalendario = calendarioService.createCalendario(calendario);
             return ResponseEntity.status(HttpStatus.CREATED).body(newCalendario);
         } catch (Exception e) {
-            // Devolvemos un error 401 si el usuario no está logueado
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage()); //if it is an error, the user is not loged :D
         }
     }
 
@@ -37,7 +36,6 @@ public class CalendarioController {
             List<Calendario> calendarios = calendarioService.getAllCalendarios();
             return ResponseEntity.ok(calendarios);
         } catch (Exception e) {
-            // Devolvemos un error 401 si el usuario no está logueado
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
         }
     }
@@ -49,7 +47,6 @@ public class CalendarioController {
             Calendario calendario = calendarioService.getCalendarioById(id);
             return ResponseEntity.ok(calendario);
         } catch (Exception e) {
-            // Si no encuentra el calendario, devolvemos un 404
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
     }
@@ -61,7 +58,6 @@ public class CalendarioController {
             Calendario updated = calendarioService.updateCalendario(id, updatedCalendario);
             return ResponseEntity.ok(updated);
         } catch (Exception e) {
-            // Si ocurre un error, devolvemos un 404 o 401 dependiendo del caso
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
         }
     }
@@ -73,8 +69,7 @@ public class CalendarioController {
             calendarioService.deleteCalendario(id);
             return ResponseEntity.noContent().build();
         } catch (Exception e) {
-            // Si ocurre un error, devolvemos un 404 si el calendario no existe
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage()); //if it is an error its that the calendar does not exist
         }
     }
 }

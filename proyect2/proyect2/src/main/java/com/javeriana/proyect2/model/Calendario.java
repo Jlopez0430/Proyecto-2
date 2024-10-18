@@ -1,5 +1,6 @@
 package com.javeriana.proyect2.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
@@ -23,7 +24,14 @@ public class Calendario {
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @JsonIgnore
     private User user;
+
+    private Long userid;
+
+    public void setUserid(Long userid) {
+        this.userid = userid;
+    }
 
     public void setName(String name) {
         this.name = name;

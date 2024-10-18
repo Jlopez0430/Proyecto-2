@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Evento - Eventus Socialis</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Espaciado adicional para los grupos de entrada */
+        .input-group {
+            margin-bottom: 1.5rem; /* Aumentar el margen inferior entre campos */
+        }
+
+        /* Asegúrate de que los labels tengan un espaciado adecuado */
+        .input-group label {
+            margin-bottom: 0.5rem; /* Espacio entre el label y el input */
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <button class="sidebar-btn" onclick="location.href='index.html';">Menu Principal</button>
+        <button class="sidebar-btn" onclick="location.href='crear_evento.html';">Crear Evento</button>
+        <button class="sidebar-btn" onclick="location.href='editar_evento.html';">Editar Evento</button>
+        <button class="sidebar-btn" onclick="location.href='eliminar_evento.html';">Eliminar Eventos</button>
+        <button class="sidebar-btn" onclick="location.href='eventos_programados.html';">Eventos Programados</button>
+        <button class="sidebar-btn" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>CREAR EVENTO</h1>
+            <div class="user-profile">
+                <img src="Usuario.jpg" alt="Usuario" class="user-img">
+                <span class="user-name" id="user-name"></span>
+            </div>
+        </header>
+
+        <div class="event-form">
+            <form id="createEventForm">
+                <div class="input-group">
+                    <label for="eventName">Nombre:</label>
+                    <input type="text" id="eventName" name="eventName" required>
+                </div>
+                <div class="input-group">
+                    <label for="eventDescription">Descripción:</label>
+                    <textarea id="eventDescription" name="eventDescription" rows="2" required></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="eventDate">Fecha:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+                <div class="input-group">
+                    <label for="eventTime">Hora:</label>
+                    <input type="time" id="eventTime" name="eventTime" required>
+                </div>
+                <div class="input-group">
+                    <label for="eventImportance">Importancia:</label>
+                    <select id="eventImportance" name="eventImportance" required>
+                        <option value="alta">Alta</option>
+                        <option value="media">Media</option>
+                        <option value="baja">Baja</option>
+                    </select>
+                </div>
+                <button type="submit">Crear</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function cerrarSesion() {
+            window.location.href = 'login.html'; 
+        }
+
+        const userName = localStorage.getItem('username');
+        if (userName) {
+            document.getElementById('user-name').textContent = userName; 
+        } else {
+            document.getElementById('user-name').textContent = 'Usuario';
+        }
+    </script>
+</body>
+</html>

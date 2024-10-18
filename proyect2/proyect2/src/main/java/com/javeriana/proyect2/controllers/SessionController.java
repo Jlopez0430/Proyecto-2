@@ -25,11 +25,7 @@ public class SessionController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody User user) {
         boolean loggedIn = userService.login(user.getName
-
-
-
-
-                (), user.getPassword()); // Usar el nombre y la contraseña
+                (), user.getPassword()); // using only the passW and Name
         if (loggedIn) {
             return ResponseEntity.ok("Inicio de sesión exitoso");
         } else {
@@ -40,7 +36,7 @@ public class SessionController {
     // Cerrar sesión
     @PostMapping("/logout")
     public ResponseEntity<?> logout() {
-        sessionManager.logout(); // Limpiar la sesión
+        sessionManager.logout();
         return ResponseEntity.ok("Sesión cerrada exitosamente");
     }
 
@@ -48,8 +44,8 @@ public class SessionController {
     @GetMapping("/current")
     public ResponseEntity<?> getCurrentUser() {
         return sessionManager.getLoggedInUser()
-                .map(user -> ResponseEntity.ok(user))  // Si hay un usuario logueado
-                .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null)) ; // Si no hay usuario logueado
+                .map(user -> ResponseEntity.ok(user))
+                .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(null)) ;
     }
 
 }

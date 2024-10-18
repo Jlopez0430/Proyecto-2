@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Evento - Eventus Socialis</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button class="sidebar-btn" onclick="location.href='index.html';">Menu Principal</button>
+        <button class="sidebar-btn" onclick="location.href='crear_evento.html';">Crear Evento</button>
+        <button class="sidebar-btn" onclick="location.href='editar_evento.html';">Editar Evento</button>
+        <button class="sidebar-btn" onclick="location.href='eliminar_evento.html';">Eliminar Eventos</button>
+        <button class="sidebar-btn" onclick="location.href='eventos_programados.html';">Eventos Programados</button>
+        <button class="sidebar-btn" onclick="cerrarSesion()">Cerrar Sesión</button>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>ELIMINAR EVENTO</h1>
+            <div class="user-profile">
+                <img src="Usuario.jpg" alt="Usuario" class="user-img">
+                <span class="user-name" id="user-name"></span>
+            </div>
+        </header>
+
+        <!-- Formulario para eliminar evento sin envío -->
+        <div class="event-form">
+            <form onsubmit="playSound(); return false;">
+                <div class="input-group">
+                    <label for="eventID">ID del Evento:</label>
+                    <input type="text" id="eventID" name="eventID" required>
+                </div>
+                <button type="submit">Eliminar</button>
+            </form>
+        </div>
+        
+        <!-- Elemento de audio para el sonido -->
+        <audio id="delete-sound">
+            <source src="ruta/del/sonido.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    
+    <script>
+        function cerrarSesion() {
+            window.location.href = 'login.html'; // Redirigir a la página de login
+        }
+
+        const userName = localStorage.getItem('username');
+        if (userName) {
+            document.getElementById('user-name').textContent = userName; // Mostrar el nombre en la página
+        } else {
+            document.getElementById('user-name').textContent = 'Usuario'; // Nombre por defecto si no hay usuario
+        }
+
+        // Función para reproducir el sonido
+        function playSound() {
+            var sound = document.getElementById("delete-sound");
+            sound.play(); // Reproducir el sonido al hacer clic en "Eliminar"
+        }
+    </script>
+</body>
+</html>
