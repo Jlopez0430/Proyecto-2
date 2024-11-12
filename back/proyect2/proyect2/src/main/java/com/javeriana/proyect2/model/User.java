@@ -15,8 +15,8 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, unique = true)
-    private String userName;
+
+    private String username;
     private String password;
 
     @OneToMany
@@ -48,21 +48,28 @@ public class User {
         return null;
     }
 
-    public String getPassword() {
+    public String getpassword() {
         return password;
     }
 
 
-    public String getUsername() {
-        return userName;
+    public String getusername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.userName = name;
+    public void setName(String username) {
+        this.username = username;
     }
 
+    public Long getId() {
+        return id;
+    }
 
-    public void setPassword(String password) {
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setpassword(String password) {
         this.password = password;
     }
 }

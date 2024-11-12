@@ -12,7 +12,7 @@ public class UserListManager {
     }
 
     public boolean addUser(User user) {
-        if (getUserByName(user.getUsername()) != null) {
+        if (getUserByName(user.getusername()) != null) {
             return false;
         }
         userList.add(user);
@@ -25,7 +25,7 @@ public class UserListManager {
 
     public User getUserByName(String name) {
         for (User user : userList) {
-            if (user.getUsername().equals(name)) {
+            if (user.getusername().equals(name)) {
                 return user;
             }
         }

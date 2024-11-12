@@ -26,7 +26,7 @@ public class UserService {
     public User registerUser(User user) throws Exception {
         try {
             // Verificar si el nombre de usuario ya existe
-            Optional<User> existingUser = Optional.ofNullable(userRepository.findByUserName(user.getUsername()));
+            Optional<User> existingUser = Optional.ofNullable(userRepository.findByusername(user.getusername()));
             if (existingUser.isPresent()) {
                 throw new IllegalArgumentException("El nombre de usuario ya está en uso.");
             }
@@ -36,27 +36,22 @@ public class UserService {
         }
     }
 
-    public boolean login(String username, String password) {
-        Optional<User> user = Optional.ofNullable(userRepository.findByUserName(username));
-        return user.isPresent() && user.get().getPassword().equals(password);
+    // Retorna el usuario autenticado en lugar de un booleano
+    public Optional<User> login(String userName, String password) {
+        Optional<User> user = Optional.ofNullable(userRepository.findByusername(userName));
+        if (user.isPresent() && user.get().getpassword().equals(password)) {
+            return user;
+        }
+        return Optional.empty();
     }
+
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
 
-    public User getUserById(Long id) {
-        try {
-            return userRepository.findById(id)
-                    .orElseThrow(() -> new Exception("Creature not found"));
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;  // Puedes lanzar una excepción personalizada o retornar `null`.
-        }
+    public Optional<User> getUserById(Long userId) {
+        return userRepository.findById(userId);
     }
 
-    public void deleteCreature(Long id) {
-        User creature = getUserById(id);
-        userRepository.delete(creature);
-    }
 }
