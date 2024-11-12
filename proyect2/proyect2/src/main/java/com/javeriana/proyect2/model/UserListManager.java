@@ -46,4 +46,3 @@ public class UserListManager {
         return null;
     }
 }
-
