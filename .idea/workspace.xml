@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b521ff49-531c-4964-a970-52d6ab104773" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/SessionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/UserListManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/UserListManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/Calendario.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/Calendario.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/services/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +208,7 @@
       <workItem from="1730121770085" duration="6142000" />
       <workItem from="1730691149517" duration="3597000" />
       <workItem from="1730947514721" duration="1209000" />
-      <workItem from="1731191497596" duration="22216000" />
+      <workItem from="1731191497596" duration="23598000" />
     </task>
     <servers />
   </component>

@@ -28,22 +28,47 @@ public class UserController {
     @PostMapping("/{userId}/calendarios")
     public ResponseEntity<?> createCalendario(@PathVariable Long userId, @RequestBody Calendario calendario) {
         try {
-            // Verificar si el usuario existe
             Optional<User> userOptional = userService.getUserById(userId);
             if (!userOptional.isPresent()) {
                 return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario no encontrado");
             }
 
             User user = userOptional.get();
-
+            calendario.setUserid(user.getId()); // Asociar el usuario con el calendario
             Calendario newCalendario = calendarioService.createCalendario(calendario);
             return ResponseEntity.status(HttpStatus.CREATED).body(newCalendario);
         } catch (Exception e) {
-            // Imprimir el error en los logs del servidor para depuración
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear el calendario: " + e.getMessage());
         }
     }
+
+//    @PostMapping("/{userId}/calendarios")
+//    public ResponseEntity<?> createCalendario(@PathVariable Long userId, @RequestBody Calendario calendario) {
+//        try {
+//            System.out.println("Buscando usuario con ID: " + userId);
+//            Optional<User> userOptional = userService.getUserById(userId);
+//
+//            if (!userOptional.isPresent()) {
+//                System.out.println("Usuario no encontrado");
+//                return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario no encontrado");
+//            }
+//
+//            User user = userOptional.get();
+//            System.out.println("Usuario encontrado: " + user.getusername());
+//
+//            calendario.setUserid(user.getId()); // Asociar el usuario al calendario
+//            System.out.println("Creando calendario para el usuario " + user.getusername());
+//
+//            Calendario newCalendario = calendarioService.createCalendario(calendario);
+//            System.out.println("Calendario creado con ID: " + newCalendario.getId());
+//
+//            return ResponseEntity.status(HttpStatus.CREATED).body(newCalendario);
+//        } catch (Exception e) {
+//            e.printStackTrace(); // Imprimir el error en los logs del servidor
+//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear el calendario: " + e.getMessage());
+//        }
+//    }
 
     @PostMapping
     public ResponseEntity<?> registerUser(@RequestBody User user) {

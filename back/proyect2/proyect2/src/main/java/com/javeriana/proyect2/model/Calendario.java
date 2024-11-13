@@ -23,7 +23,7 @@ public class Calendario {
     private String importancia;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false)
     @JsonIgnore
     private User user;
 

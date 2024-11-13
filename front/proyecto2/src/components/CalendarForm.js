@@ -11,13 +11,13 @@ function CalendarForm({ fetchCalendarios }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const userId = localStorage.getItem('userId'); // Obtener el userId del localStorage
+            const userId = localStorage.getItem('userId');
             if (!userId) {
                 throw new Error("No se encontró un userId en el localStorage. Inicie sesión nuevamente.");
             }
 
-            await api.post(`users/${userId}/calendarios`, { name, descripcion, fecha, hora, importancia });
-            fetchCalendarios();
+            await api.post(`/users/${userId}/calendarios`, { name, descripcion, fecha, hora, importancia });
+            fetchCalendarios(); // Refresca la lista de calendarios
             setName('');
             setDescripcion('');
             setFecha('');
