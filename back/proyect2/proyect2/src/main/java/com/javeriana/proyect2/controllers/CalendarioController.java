@@ -73,3 +73,5 @@ public class CalendarioController {
         }
     }
 }
+
+// verificar funcionalidades clave
