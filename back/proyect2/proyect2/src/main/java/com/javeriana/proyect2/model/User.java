@@ -9,7 +9,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-//@Table(name = "\"user\"")
+@Table(name = "user")
 public class User {
 
     @Id
@@ -27,12 +27,10 @@ public class User {
         return calendarios;
     }
 
-    public void setCalendarios(Calendario calendario) {
-        this.calendarios.add(calendario);
-    }
-
     public void addCalendario(Calendario calendario) {
-        calendarios.add(calendario);
+        if (!calendarios.contains(calendario)) {
+            calendarios.add(calendario);
+        }
     }
 
     public void removeCalendario(Calendario calendario) {

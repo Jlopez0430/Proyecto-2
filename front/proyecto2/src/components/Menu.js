@@ -9,7 +9,7 @@ function Menu() {
         { name: "Crear", path: "/calendarios" },
         { name: "Eliminar", path: "/servicios" },
         { name: "Actualizar", path: "/acerca" },
-        { name: "Ver", path: "/contacto" }
+        { name: "Ver", path: "/vercalendarios" }
     ];
 
     const handleClick = (item) => {

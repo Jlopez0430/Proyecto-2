@@ -5,6 +5,7 @@ import Register from './components/Register';
 import Calendarios from './components/Calendarios';
 import PrivateRoute from './components/PrivateRoute';
 import Menu from './components/Menu';
+import VerCalendarios from "./components/VerCalendarios";
 
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
                     element={<PrivateRoute isAuthenticated={isAuthenticated}><Calendarios setIsAuthenticated={setIsAuthenticated} /></PrivateRoute>}
                 />
                 <Route path="/menu" element={<Menu />} />
+                <Route path="/vercalendarios" element={<VerCalendarios />} />
             </Routes>
         </Router>
     );

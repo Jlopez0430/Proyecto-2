@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b521ff49-531c-4964-a970-52d6ab104773" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/components/VerCalendarios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/CalendarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/CalendarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/repository/CalendarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/repository/CalendarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/CalendarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/CalendarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/UserServiceIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/UserServiceIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Menu.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +29,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -67,7 +79,7 @@
     &quot;git-widget-placeholder&quot;: &quot;feature/damo&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/diego/Proyecto-2/proyect2/proyect2/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/diego/proyecto2-intentofront&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/diego/Proyecto-2/front/proyecto2/src/components&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,6 +100,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diego\Proyecto-2\front\proyecto2\src\components" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static\js" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static\images" />
@@ -206,7 +219,7 @@
       <workItem from="1730121770085" duration="6142000" />
       <workItem from="1730691149517" duration="3597000" />
       <workItem from="1730947514721" duration="1209000" />
-      <workItem from="1731191497596" duration="36817000" />
+      <workItem from="1731191497596" duration="49553000" />
     </task>
     <servers />
   </component>
@@ -231,11 +244,6 @@
           <url>file://$PROJECT_DIR$/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceIntegrationTest.java</url>
           <line>18</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/CalendarioController.java</url>
-          <line>26</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -29,25 +29,21 @@ public class CalendarioService {
     }
 
     public Calendario createCalendario(Calendario calendario) throws Exception {
-        // Verificar si el usuario está logueado
-        if (!sessionManager.isLoggedIn()) {
-            throw new Exception("Debe iniciar sesión antes de crear un calendario.");
+        try {
+            // Guardar el calendario en el repositorio
+            return calendarioRepository.save(calendario);
+        } catch (Exception e) {
+            throw new Exception("Error al guardar el calendario: " + e.getMessage());
         }
-
-        User user = sessionManager.getUser();
-        user.addCalendario(calendario);
-
-        return calendarioRepository.save(calendario);
     }
 
-    public List<Calendario> getAllCalendarios() throws Exception {
+    public List<Calendario> getCalendariosByUserId(Long userId) throws Exception {
         // Verificar si el usuario está logueado
-        if (!sessionManager.isLoggedIn()) {
-            throw new Exception("Debe iniciar sesión para ver los calendarios.");
-        }
 
-        return calendarioRepository.findAll();
+        // Buscar los calendarios filtrados por userid
+        return calendarioRepository.findByUserid(userId);
     }
+
 
     public Calendario getCalendarioById(Long id) throws Exception {
         if (!sessionManager.isLoggedIn()) {
