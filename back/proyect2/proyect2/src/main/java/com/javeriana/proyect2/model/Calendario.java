@@ -3,12 +3,12 @@ package com.javeriana.proyect2.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
+
+import java.util.List;
 
 @Entity
-@Data // Esto es opcional, pueden usarlo o crear los getter y setters
+@Data
 @NoArgsConstructor
 public class Calendario {
 
@@ -28,6 +28,54 @@ public class Calendario {
     private User user;
 
     private Long userid;
+
+    @OneToMany(mappedBy = "calendario", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Recordatorio> recordatorios;
+
+    // Constructor
+    public Calendario(String name, String descripcion, String fecha, String hora, String importancia, User user) {
+        this.name = name;
+        this.descripcion = descripcion;
+        this.fecha = fecha;
+        this.hora = hora;
+        this.importancia = importancia;
+        this.user = user;
+    }
+
+    // Métodos para agregar recordatorios (opcional)
+    public void addRecordatorio(Recordatorio recordatorio) {
+        this.recordatorios.add(recordatorio);
+        recordatorio.setCalendario(this); // Establecer la relación bidireccional
+    }
+
+    // Getters y Setters generados por Lombok
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
+    public String getHora() {
+        return hora;
+    }
+
+    public String getImportancia() {
+        return importancia;
+    }
+
+    public List<Recordatorio> getRecordatorios() {
+        return recordatorios;
+    }
 
     public void setUserid(Long userid) {
         this.userid = userid;
@@ -55,27 +103,8 @@ public class Calendario {
         this.importancia = importancia;
     }
 
-    public Long getId() {
-        return id;
+    public void setRecordatorios(List<Recordatorio> recordatorios) {
+        this.recordatorios = recordatorios;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public String getFecha() {
-        return fecha;
-    }
-
-    public String getHora() {
-        return hora;
-    }
-
-    public String getImportancia() {
-        return importancia;
-    }
 }

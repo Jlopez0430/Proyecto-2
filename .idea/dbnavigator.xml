@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
     <value-preview-text-wrapping value="true" />
@@ -8,6 +9,8 @@
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
+=======
+>>>>>>> 5d00e578c5414730792c4562e2bf1fe39c6b4744
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
   </component>
@@ -18,6 +21,10 @@
         <display-mode value="TABBED" />
         <navigation-history-size value="100" />
         <show-object-details value="false" />
+<<<<<<< HEAD
+=======
+        <enable-sticky-paths value="true" />
+>>>>>>> 5d00e578c5414730792c4562e2bf1fe39c6b4744
       </general>
       <filters>
         <object-type-filter>
@@ -162,6 +169,10 @@
       <confirmations>
         <save-changes value="false" />
         <revert-changes value="true" />
+<<<<<<< HEAD
+=======
+        <exit-on-changes value="ASK" />
+>>>>>>> 5d00e578c5414730792c4562e2bf1fe39c6b4744
       </confirmations>
     </code-editor-settings>
     <code-completion-settings>
@@ -360,10 +371,13 @@
         <compile-dependencies value="ASK" />
         <always-show-controls value="false" />
       </compiler>
+<<<<<<< HEAD
       <debugger>
         <debugger-type value="ASK" />
         <use-generic-runners value="true" />
       </debugger>
+=======
+>>>>>>> 5d00e578c5414730792c4562e2bf1fe39c6b4744
     </operation-settings>
     <ddl-file-settings>
       <extensions>

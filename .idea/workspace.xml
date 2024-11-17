@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b521ff49-531c-4964-a970-52d6ab104773" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/Proyecto-2.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
@@ -22,6 +23,81 @@
       <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/proyecto2/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Menu.js" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/Proyecto-2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/libraries/fasterxml_jackson_core_databind.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/libraries/thymeleaf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/libraries/thymeleaf_spring5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/proyect2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/Proyect2Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/CalendarioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/SessionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/Calendario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/UserListManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/recordotario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/repository/CalendarioRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/CalendarioService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/SessionManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/Proyect2ApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/UserServiceIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/UserServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/components/PrivateRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/services/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/back/README.md" afterDir="false" />
+>>>>>>> 5d00e578c5414730792c4562e2bf1fe39c6b4744
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +125,7 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2nUoPLutLGJnXH5K1Q7w3BDAQJ3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -78,6 +155,7 @@
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Spring Boot.Proyect2Application.executor": "Run",
@@ -86,22 +164,41 @@
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/diego/Proyecto-2/proyect2/proyect2/src/test/java",
     "last_opened_file_path": "C:/Users/Usuario/Proyecto-2",
+=======
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Proyect2Application.executor": "Run",
+    "git-widget-placeholder": "Merging Andres-Galan",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/diego/Proyecto-2/proyect2/proyect2/src/test/java",
+    "last_opened_file_path": "C:/Users/diego/proyecto2-intentofront",
+>>>>>>> 5d00e578c5414730792c4562e2bf1fe39c6b4744
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+<<<<<<< HEAD
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.7491369",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "ts.external.directory.path": "C:\\Users\\diego\\Downloads\\apps\\IntelliJ IDEA 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+=======
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.7491369",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+>>>>>>> 5d00e578c5414730792c4562e2bf1fe39c6b4744
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
+<<<<<<< HEAD
       "mysql_aurora_aws",
       "mysql"
+=======
+      "mysql_aurora_aws"
+>>>>>>> 5d00e578c5414730792c4562e2bf1fe39c6b4744
     ]
   }
 }]]></component>
@@ -119,7 +216,7 @@
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static\css" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Proyect2Application">
+  <component name="RunManager" selected="JUnit.All in Proyecto-2">
     <configuration name="All in Proyecto-2 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Proyecto-2" />
       <option name="PACKAGE_NAME" value="" />
