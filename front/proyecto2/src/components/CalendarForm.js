@@ -30,7 +30,7 @@ function CalendarForm({ fetchCalendarios }) {
                 console.log("falla aqui 5", hora);
                 setImportancia(importancia);
                 console.log("falla aqui 6", importancia);
-                 await api.post(`/users/${userId}/calendarios`, { name, descripcion,fecha,hora, importancia });
+                 await api.post(`/calendario/${userId}`, { name, descripcion,fecha,hora, importancia });
                  console.log("si sirve?")
             }
 

@@ -16,7 +16,7 @@ function Calendarios({ setIsAuthenticated }) {
                 throw new Error("No se encontró un userId en el localStorage.");
             }
 
-            const response = await api.get(`/users/${userId}/calendarios`);
+            const response = await api.get(`/calendario/${userId}`);
             setCalendarios(response.data);
         } catch (error) {
             console.error("Error fetching calendars:", error);

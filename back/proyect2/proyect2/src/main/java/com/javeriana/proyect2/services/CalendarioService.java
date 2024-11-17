@@ -19,13 +19,16 @@ import java.util.List;
 
 @Service
 public class CalendarioService {
+
+    private  UserService userService;
     private final CalendarioRepository calendarioRepository;
     private final SessionManager sessionManager;
 
     @Autowired
-    public CalendarioService(CalendarioRepository calendarioRepository, SessionManager sessionManager) {
+    public CalendarioService(CalendarioRepository calendarioRepository, SessionManager sessionManager, UserService userService) {
         this.calendarioRepository = calendarioRepository;
         this.sessionManager = sessionManager;
+        this.userService = userService;
     }
 
     public Calendario createCalendario(Calendario calendario) throws Exception {
@@ -56,10 +59,6 @@ public class CalendarioService {
 
     // Nuevo método: Actualizar un calendario existente
     public Calendario updateCalendario(Long id, Calendario updatedCalendario) throws Exception {
-        if (!sessionManager.isLoggedIn()) {
-            throw new Exception("Debe iniciar sesión para actualizar un calendario.");
-        }
-
         Calendario existingCalendario = calendarioRepository.findById(id)
                 .orElseThrow(() -> new Exception("Calendario no encontrado con ID: " + id));
 
@@ -75,12 +74,9 @@ public class CalendarioService {
 
     // Nuevo método: Eliminar un calendario
     public void deleteCalendario(Long id) throws Exception {
-        if (!sessionManager.isLoggedIn()) {
-            throw new Exception("Debe iniciar sesión para eliminar un calendario.");
-        }
-        User user = sessionManager.getUser();
-        Calendario calendario = user.searchById(id);
-        user.removeCalendario(calendario);
+        User user1 = userService.getUserId(id);
+        Calendario calendario = user1.searchById(id);
+        user1.removeCalendario(calendario);
         calendario = calendarioRepository.findById(id)
                 .orElseThrow(() -> new Exception("Calendario no encontrado con ID: " + id));
 
