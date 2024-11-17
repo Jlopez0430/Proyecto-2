@@ -34,8 +34,6 @@ public class CalendarioService {
             throw new Exception("Debe iniciar sesión antes de crear un calendario.");
         }
 
-        User user = sessionManager.getUser();
-        user.addCalendario(calendario);
 
         return calendarioRepository.save(calendario);
     }
@@ -56,6 +54,15 @@ public class CalendarioService {
 
         return calendarioRepository.findById(id)
                 .orElseThrow(() -> new Exception("Calendario no encontrado con ID: " + id));
+    }
+
+    public List <Calendario> getCalendarioByUserId(Long userid) throws Exception {
+        if (!sessionManager.isLoggedIn()) {
+            throw new Exception("Debe iniciar sesión para ver un calendario.");
+        }
+
+        return calendarioRepository.findByUserid(userid);
+
     }
 
     // Nuevo método: Actualizar un calendario existente

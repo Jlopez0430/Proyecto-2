@@ -6,7 +6,7 @@ function Menu() {
     const [selectedOption, setSelectedOption] = useState('');
 
     const menuItems = [
-        { name: "Crear", path: "/calendarios" },
+        { name: "Crear", path: "/calendarios/crear" },
         { name: "Eliminar", path: "/servicios" },
         { name: "Actualizar", path: "/acerca" },
         { name: "Ver", path: "/contacto" }

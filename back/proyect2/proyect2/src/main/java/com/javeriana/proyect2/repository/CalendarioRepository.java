@@ -2,10 +2,13 @@ package com.javeriana.proyect2.repository;
 
 import com.javeriana.proyect2.model.Calendario;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
 import java.util.List;
 
 public interface CalendarioRepository extends JpaRepository<Calendario, Long> {
 
-    // Método para obtener calendarios por userId
-    List<Calendario> findByUserid(Long userId);
+    @Query("SELECT c from Calendario c where c.user.id = :userid")
+    List<Calendario> findByUserid(@Param("userid")Long userId);
 }

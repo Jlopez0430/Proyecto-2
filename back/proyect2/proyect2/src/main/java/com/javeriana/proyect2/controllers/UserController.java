@@ -23,6 +23,7 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+    @Autowired
     private CalendarioService calendarioService;
 
     @PostMapping("/{userId}/calendarios")
@@ -34,13 +35,29 @@ public class UserController {
             }
 
             User user = userOptional.get();
-            calendario.setUserid(user.getId());// Asociar el usuario con el calendario
+            calendario.setUser(user);// Asociar el usuario con el calendario
             Calendario newCalendario = calendario;
+
+            calendarioService.createCalendario(newCalendario);
             return ResponseEntity.status(HttpStatus.CREATED).body(newCalendario);
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear el calendario: " + e.getMessage());
         }
+    }
+
+    @GetMapping("/{userId}/calendarios")
+    public ResponseEntity<?> getCalendarios(@PathVariable Long userId) {
+        try{
+
+            Optional<User> userOptional = userService.getUserById(userId);
+            List<Calendario> calendarios = calendarioService.getCalendarioByUserId(userOptional.get().getId());
+            return ResponseEntity.ok(calendarios);
+        }catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear el calendario: " + e.getMessage());
+        }
+
     }
 
 //    @PostMapping("/{userId}/calendarios")

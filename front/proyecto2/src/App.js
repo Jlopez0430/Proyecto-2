@@ -7,9 +7,12 @@ import PrivateRoute from './components/PrivateRoute';
 import Menu from './components/Menu';
 
 import './App.css';
+import Eliminar from "./components/Eliminar";
 
 function App() {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [isAuthenticated, setIsAuthenticated] = useState(
+        !!localStorage.getItem("token")
+    );
 
     return (
         <Router>
@@ -18,10 +21,15 @@ function App() {
                 <Route path="/login" element={<Login setIsAuthenticated={setIsAuthenticated} />} />
                 <Route path="/register" element={<Register />} />
                 <Route
+                    path="/calendarios/crear"
+                    element={<PrivateRoute isAuthenticated={isAuthenticated}><Calendarios setIsAuthenticated={setIsAuthenticated} /></PrivateRoute>}
+                />
+                <Route
                     path="/calendarios"
                     element={<PrivateRoute isAuthenticated={isAuthenticated}><Calendarios setIsAuthenticated={setIsAuthenticated} /></PrivateRoute>}
                 />
                 <Route path="/menu" element={<Menu />} />
+                <Route path="/servicios" element={<Eliminar />} />
             </Routes>
         </Router>
     );

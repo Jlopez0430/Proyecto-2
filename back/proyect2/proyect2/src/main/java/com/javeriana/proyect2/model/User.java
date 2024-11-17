@@ -19,8 +19,7 @@ public class User {
     private String username;
     private String password;
 
-    @OneToMany
-    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Calendario> calendarios = new ArrayList<>();
 
     public List<Calendario> getCalendarios() {

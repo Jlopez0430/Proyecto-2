@@ -25,7 +25,7 @@ public class CalendarioController {
     }
 
     // Obtener todos los calendarios
-    @GetMapping
+    @GetMapping("/getcalendarios")
     public ResponseEntity<?> getAllCalendarios() {
         try {
             List<Calendario> calendarios = calendarioService.getAllCalendarios();
