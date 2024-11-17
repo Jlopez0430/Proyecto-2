@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b521ff49-531c-4964-a970-52d6ab104773" name="Changes" comment="Realizando ultimos ajustes del proyecto" />
+=======
+    <list default="true" id="b521ff49-531c-4964-a970-52d6ab104773" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/CalendarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/CalendarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/CalendarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/CalendarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" afterDir="false" />
+    </list>
+>>>>>>> ee0ea18dd7ed4fd811291386292493eebfce1a20
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +85,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Proyect2Application.executor": "Run",
@@ -118,6 +129,50 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Proyect2Application.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.All in Proyecto-2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.All in Proyecto-2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalendarioServiceIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalendarioServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceIntegrationTest.testCreateUser_ShouldCreateUserSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest,testDeleteUser_ShouldRemoveUserSuccessfully and 1 more.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.testCreateUser_ShouldSaveUserSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.testDeleteUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.testDeleteUser_ShouldRemoveUserSuccessfully.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Proyect2Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/damo&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/diego/Proyecto-2/proyect2/proyect2/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/diego/Proyecto-2/front/proyecto2/src/components&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.7491369&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\diego\\Downloads\\apps\\IntelliJ IDEA 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+>>>>>>> ee0ea18dd7ed4fd811291386292493eebfce1a20
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -127,6 +182,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\diego\Proyecto-2\front\proyecto2\src\components" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static\js" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static\images" />
@@ -237,7 +293,7 @@
       <workItem from="1730121770085" duration="6142000" />
       <workItem from="1730691149517" duration="3597000" />
       <workItem from="1730947514721" duration="1209000" />
-      <workItem from="1731191497596" duration="23598000" />
+      <workItem from="1731191497596" duration="51332000" />
     </task>
     <task id="LOCAL-00001" summary="Realizando ultimos ajustes del proyecto">
       <option name="closed" value="true" />

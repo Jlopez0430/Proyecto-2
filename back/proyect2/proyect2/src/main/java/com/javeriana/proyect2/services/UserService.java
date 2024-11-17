@@ -36,6 +36,12 @@ public class UserService {
         }
     }
 
+    public List<Calendario> getCalendariosByUserId(Long id) {
+        // Verificar si el usuario está logueado
+        User user = userRepository.findByid(id);
+        return user.getCalendarios();
+    }
+
     // Retorna el usuario autenticado en lugar de un booleano
     public Optional<User> login(String userName, String password) {
         Optional<User> user = Optional.ofNullable(userRepository.findByusername(userName));
@@ -52,6 +58,10 @@ public class UserService {
 
     public Optional<User> getUserById(Long userId) {
         return userRepository.findById(userId);
+    }
+
+    public User getUserId(Long userId){
+        return userRepository.findByid(userId);
     }
 
 }

@@ -8,4 +8,5 @@ public interface CalendarioRepository extends JpaRepository<Calendario, Long> {
 
     // Método para obtener calendarios por userId
     List<Calendario> findByUserid(Long userId);
+
 }

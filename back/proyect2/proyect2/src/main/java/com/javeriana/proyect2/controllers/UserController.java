@@ -2,6 +2,7 @@ package com.javeriana.proyect2.controllers;
 
 import com.javeriana.proyect2.model.Calendario;
 import com.javeriana.proyect2.model.User;
+import com.javeriana.proyect2.repository.CalendarioRepository;
 import com.javeriana.proyect2.services.CalendarioService;
 import com.javeriana.proyect2.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class UserController {
     @Autowired
     private UserService userService;
     private CalendarioService calendarioService;
+    @Autowired
+    private CalendarioRepository calendarioRepository;
 
     @PostMapping("/{userId}/calendarios")
     public ResponseEntity<?> createCalendario(@PathVariable Long userId, @RequestBody Calendario calendario) {
@@ -34,13 +37,20 @@ public class UserController {
             }
 
             User user = userOptional.get();
-            calendario.setUserid(user.getId()); // Asociar el usuario con el calendario
-            Calendario newCalendario = calendarioService.createCalendario(calendario);
+            calendario.setUserid(user.getId());// Asociar el usuario con el calendario
+            user.addCalendario(calendario);
+            Calendario newCalendario = calendario;
             return ResponseEntity.status(HttpStatus.CREATED).body(newCalendario);
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error al crear el calendario: " + e.getMessage());
         }
+    }
+
+    @PostMapping("users/{userId}")
+    public ResponseEntity<?> getCalendarios(@PathVariable Long userId) {
+            List<Calendario> calendarios = userService.getCalendariosByUserId(userId);
+            return ResponseEntity.ok(calendarios);
     }
 
 //    @PostMapping("/{userId}/calendarios")
