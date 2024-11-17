@@ -34,8 +34,8 @@ public class UserController {
             }
 
             User user = userOptional.get();
-            calendario.setUserid(user.getId()); // Asociar el usuario con el calendario
-            Calendario newCalendario = calendarioService.createCalendario(calendario);
+            calendario.setUserid(user.getId());// Asociar el usuario con el calendario
+            Calendario newCalendario = calendario;
             return ResponseEntity.status(HttpStatus.CREATED).body(newCalendario);
         } catch (Exception e) {
             e.printStackTrace();

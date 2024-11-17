@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 import CalendarForm from './CalendarForm';
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 function Calendarios({ setIsAuthenticated }) {
     const [calendarios, setCalendarios] = useState([]);
@@ -9,7 +10,8 @@ function Calendarios({ setIsAuthenticated }) {
 
     const fetchCalendarios = async () => {
         try {
-            const userId = localStorage.getItem('userId');
+            const userId1 = localStorage.getItem('userId');
+            const userId = +userId1;
             if (!userId) {
                 throw new Error("No se encontró un userId en el localStorage.");
             }

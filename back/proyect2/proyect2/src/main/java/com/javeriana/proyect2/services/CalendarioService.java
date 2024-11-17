@@ -35,10 +35,8 @@ public class CalendarioService {
         }
 
         User user = sessionManager.getUser();
-        calendario.setUserid(user.getId());
         user.addCalendario(calendario);
 
-        // Si está logueado, guardar el calendario
         return calendarioRepository.save(calendario);
     }
 

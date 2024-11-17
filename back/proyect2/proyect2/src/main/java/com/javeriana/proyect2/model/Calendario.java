@@ -33,6 +33,8 @@ public class Calendario {
         this.userid = userid;
     }
 
+    public void setUser(User user){ this.user = user;}
+
     public void setName(String name) {
         this.name = name;
     }

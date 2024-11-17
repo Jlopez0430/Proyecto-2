@@ -11,12 +11,7 @@ import java.util.List;
 @RequestMapping("/api/calendario")
 public class CalendarioController {
 
-    private final CalendarioService calendarioService;
-
-    @Autowired
-    public CalendarioController(CalendarioService calendarioService) {
-        this.calendarioService = calendarioService;
-    }
+    private CalendarioService calendarioService;
 
     // Crear un nuevo calendario
     @PostMapping

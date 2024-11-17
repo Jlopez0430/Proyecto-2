@@ -27,8 +27,8 @@ public class User {
         return calendarios;
     }
 
-    public void setCalendarios(List<Calendario> calendarios) {
-        this.calendarios = calendarios;
+    public void setCalendarios(Calendario calendario) {
+        this.calendarios.add(calendario);
     }
 
     public void addCalendario(Calendario calendario) {
