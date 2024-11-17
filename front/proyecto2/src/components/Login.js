@@ -17,7 +17,7 @@ function Login({ setIsAuthenticated }) {
                 setIsAuthenticated(true);
                 console.log("token", response.data.token);
                 console.log("id", response.data.userId);
-                navigate("/calendarios");
+                navigate("/menu");
             }
         } catch (error) {
             console.error("Login failed:", error);
