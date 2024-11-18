@@ -4,42 +4,54 @@ import CalendarForm from './CalendarForm';
 import { useNavigate } from 'react-router-dom';
 
 function Calendarios({ setIsAuthenticated }) {
-    const [calendarios, setCalendarios] = useState([]); // Estado inicial como array vacío.
+    const [calendarios, setCalendarios] = useState([]); // Siempre inicializar como un array vacío
+    const [loading, setLoading] = useState(true); // Estado para mostrar indicador de carga
+    const [error, setError] = useState(null); // Estado para manejar errores
     const navigate = useNavigate();
 
+    // Función para obtener los calendarios desde la API
     const fetchCalendarios = async () => {
+        setLoading(true); // Mostrar indicador de carga
+        setError(null); // Reiniciar errores
         try {
-            const userId1 = localStorage.getItem('userId');
-            const userId = +userId1; // Convertimos userId a número.
+            const userId = localStorage.getItem('userId'); // Obtener el userId desde localStorage
             if (!userId) {
-                console.error("Error: userId no válido en localStorage.");
-                throw new Error("No se encontró un userId válido en el localStorage.");
+                throw new Error("No se encontró un userId en el localStorage.");
             }
 
+            // Solicitar datos de la API
             const response = await api.get(`/calendario/${userId}`);
-            console.log("Respuesta completa de la API:", response);
+            console.log("Respuesta de la API:", response.data);
 
-            // Validamos que la API devuelve un array.
-            if (response && Array.isArray(response.data)) {
-                console.log("Datos obtenidos:", response.data);
-                setCalendarios(response.data);
+            // Validar y forzar que los datos sean un array
+            if (Array.isArray(response.data)) {
+                setCalendarios(response.data); // Actualizamos calendarios con los datos recibidos
             } else {
-                console.error("La API no devolvió un array. Respuesta:", response.data);
-                setCalendarios([]); // Configurar como array vacío en caso de datos no válidos.
+                console.warn("La respuesta no es un array. Forzando a array vacío.");
+                setCalendarios([]); // Forzar a un array vacío si no es válido
             }
         } catch (error) {
             console.error("Error al obtener los calendarios:", error);
-            setCalendarios([]); // Configurar como array vacío en caso de error.
+            setError("No se pudieron cargar los calendarios. Intenta nuevamente.");
+            setCalendarios([]); // Reseteamos calendarios a un array vacío en caso de error
+        } finally {
+            setLoading(false); // Ocultamos indicador de carga
         }
     };
 
     const handleLogout = () => {
+        // Cerramos sesión limpiando el almacenamiento local y redirigiendo al login
         localStorage.removeItem('token');
         localStorage.removeItem('userId');
         setIsAuthenticated(false);
-        navigate("/login");
+        navigate("/login", { replace: true }); // replace evita volver al historial anterior
     };
 
+    const handleBack = () => {
+        navigate(-1); // Retrocede a la página anterior
+    };
+
+    // Llamar a fetchCalendarios al montar el componente
     useEffect(() => {
         fetchCalendarios();
     }, []);
@@ -48,22 +60,28 @@ function Calendarios({ setIsAuthenticated }) {
         <div>
             <h1>Tus Calendarios</h1>
             <button onClick={handleLogout}>Cerrar Sesión</button>
-            <CalendarForm fetchCalendarios={fetchCalendarios} />
-            <ul>
-                {Array.isArray(calendarios) && calendarios.length > 0 ? (
-                    calendarios.map((calendar) => (
-                        <li key={calendar.id}>
-                            <strong>{calendar.name}</strong>
-                            <br />
-                            {calendar.descripcion}
-                            <br />
-                            Fecha: {calendar.fecha}, Hora: {calendar.hora}, Importancia: {calendar.importancia}
-                        </li>
-                    ))
-                ) : (
-                    <li>No hay calendarios disponibles.</li>
-                )}
-            </ul>
+            <button onClick={handleBack}>Volver</button>
+
+            {/* Mostrar indicador de carga */}
+            {loading && <p>Cargando calendarios...</p>}
+
+            {/* Mostrar errores si ocurren */}
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+
+            {/* Mostrar lista de calendarios */}
+            {!loading && !error && (
+                <ul>
+                    {calendarios.length > 0 ? (
+                        calendarios.map((calendar) => (
+                            <li key={calendar.id}>
+                                <strong>{calendar.name}</strong>
+                            </li>
+                        ))
+                    ) : (
+                        <p>No tienes calendarios disponibles.</p>
+                    )}
+                </ul>
+            )}
         </div>
     );
 }

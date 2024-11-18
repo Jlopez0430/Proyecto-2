@@ -1,85 +1,73 @@
 package com.javeriana.proyect2.services;
 
 import com.javeriana.proyect2.model.Calendario;
+import com.javeriana.proyect2.model.Recordatorio;
 import com.javeriana.proyect2.model.User;
 import com.javeriana.proyect2.repository.CalendarioRepository;
 import com.javeriana.proyect2.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
-
-import com.javeriana.proyect2.model.Calendario;
-import com.javeriana.proyect2.repository.CalendarioRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-
 @Service
 public class CalendarioService {
 
-    private  UserService userService;
     private final CalendarioRepository calendarioRepository;
-    private final SessionManager sessionManager;
+    private final UserRepository userRepository;
 
     @Autowired
-    public CalendarioService(CalendarioRepository calendarioRepository, SessionManager sessionManager, UserService userService) {
+    public CalendarioService(CalendarioRepository calendarioRepository, UserRepository userRepository) {
         this.calendarioRepository = calendarioRepository;
-        this.sessionManager = sessionManager;
-        this.userService = userService;
+        this.userRepository = userRepository;
     }
 
-    public Calendario createCalendario(Calendario calendario) throws Exception {
-        try {
-            // Guardar el calendario en el repositorio
-            return calendarioRepository.save(calendario);
-        } catch (Exception e) {
-            throw new Exception("Error al guardar el calendario: " + e.getMessage());
-        }
-    }
+    // Crear un calendario con opción de recordatorio
+    public Calendario createCalendario(Long userId, Calendario calendario, boolean crearRecordatorio) throws Exception {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new Exception("Usuario no encontrado con ID: " + userId));
 
-    public List<Calendario> getCalendariosByUserId(Long userId) throws Exception {
-        // Verificar si el usuario está logueado
+        calendario.setUser(user);
 
-        // Buscar los calendarios filtrados por userid
-        return calendarioRepository.findByUserid(userId);
-    }
-
-
-    public Calendario getCalendarioById(Long id) throws Exception {
-        if (!sessionManager.isLoggedIn()) {
-            throw new Exception("Debe iniciar sesión para ver un calendario.");
+        if (crearRecordatorio) {
+            Recordatorio recordatorio = new Recordatorio(true);
+            calendario.setRecordatorio(recordatorio);
         }
 
-        return calendarioRepository.findById(id)
-                .orElseThrow(() -> new Exception("Calendario no encontrado con ID: " + id));
+        return calendarioRepository.save(calendario);
     }
 
-    // Nuevo método: Actualizar un calendario existente
-    public Calendario updateCalendario(Long id, Calendario updatedCalendario) throws Exception {
+    // Actualizar un calendario con lógica para recordatorios
+    public Calendario updateCalendario(Long id, Calendario updatedCalendario, boolean actualizarRecordatorio) throws Exception {
         Calendario existingCalendario = calendarioRepository.findById(id)
                 .orElseThrow(() -> new Exception("Calendario no encontrado con ID: " + id));
 
-        // Actualiza los campos necesarios (aquí puedes modificar según tus necesidades)
+        // Actualizar los campos del calendario
         existingCalendario.setName(updatedCalendario.getName());
-        existingCalendario.setDescripcion(updatedCalendario.getDescripcion());
         existingCalendario.setFecha(updatedCalendario.getFecha());
         existingCalendario.setHora(updatedCalendario.getHora());
-        existingCalendario.setImportancia(updatedCalendario.getImportancia());
+
+        // Lógica para actualizar el recordatorio
+        if (actualizarRecordatorio) {
+            // Si ya existe un recordatorio, eliminarlo y crear uno nuevo
+            if (existingCalendario.getRecordatorio() != null) {
+                existingCalendario.removeRecordatorio();
+            }
+            Recordatorio nuevoRecordatorio = new Recordatorio(true);
+            existingCalendario.setRecordatorio(nuevoRecordatorio);
+        } else {
+            // Si no se quiere recordatorio, eliminar el existente (si hay)
+            if (existingCalendario.getRecordatorio() != null) {
+                existingCalendario.removeRecordatorio();
+            }
+        }
 
         return calendarioRepository.save(existingCalendario);
     }
 
-    // Nuevo método: Eliminar un calendario
+    // Eliminar un calendario (y su recordatorio si existe)
     public void deleteCalendario(Long id) throws Exception {
-        User user1 = userService.getUserId(id);
-        Calendario calendario = user1.searchById(id);
-        user1.removeCalendario(calendario);
-        calendario = calendarioRepository.findById(id)
+        Calendario calendario = calendarioRepository.findById(id)
                 .orElseThrow(() -> new Exception("Calendario no encontrado con ID: " + id));
 
-        calendarioRepository.delete(calendario);
+        calendarioRepository.delete(calendario); // `orphanRemoval` asegura la eliminación del recordatorio
     }
 }

@@ -16,11 +16,21 @@ function VerCalendarios({ setIsAuthenticated }) {
             }
 
             const response = await api.get(`/usuarios/${userId}`);
-            setCalendarios(response.data);  // Guardar los calendarios en el estado
+            const calendariosData = response.data;
+
+            // Verifica si la respuesta es un array
+            if (Array.isArray(calendariosData)) {
+                setCalendarios(calendariosData);
+            } else {
+                console.warn("La respuesta no es un array. Datos:", calendariosData);
+                setCalendarios([]); // Asigna un array vacío en caso de que la respuesta no sea un array
+            }
         } catch (error) {
             console.error("Error fetching calendars:", error);
+            setCalendarios([]); // Si hay un error, asegura que calendarios sea un array vacío
         }
     };
+
 
     const handleLogout = () => {
         localStorage.removeItem('token');
