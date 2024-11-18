@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b521ff49-531c-4964-a970-52d6ab104773" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/front/proyecto2/src/components/actualizarCalendar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/CalendarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/controllers/CalendarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/CalendarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/services/CalendarioService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +19,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/front/proyecto2/src/components/actualizarCalendar.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -40,55 +42,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Proyect2Application.executor&quot;: &quot;Run&quot;,
-    &quot;Application.UserServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.All in Proyecto-2 (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.All in Proyecto-2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CalendarioServiceIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CalendarioServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceIntegrationTest.testCreateUser_ShouldCreateUserSuccessfully.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest,testDeleteUser_ShouldRemoveUserSuccessfully and 1 more.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.testCreateUser_ShouldSaveUserSuccessfully.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.testDeleteUser.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UserServiceTest.testDeleteUser_ShouldRemoveUserSuccessfully.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.Proyect2Application.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/damo&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/diego/Proyecto-2/proyect2/proyect2/src/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/diego/Proyecto-2/front/proyecto2/src/components&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.7491369&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\diego\\Downloads\\apps\\IntelliJ IDEA 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Proyect2Application.executor": "Run",
+    "Application.UserServiceTest.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.All in Proyecto-2 (1).executor": "Run",
+    "JUnit.All in Proyecto-2.executor": "Run",
+    "JUnit.CalendarioServiceIntegrationTest.executor": "Run",
+    "JUnit.CalendarioServiceTest.executor": "Run",
+    "JUnit.UserServiceIntegrationTest.executor": "Run",
+    "JUnit.UserServiceIntegrationTest.testCreateUser_ShouldCreateUserSuccessfully.executor": "Run",
+    "JUnit.UserServiceTest,testDeleteUser_ShouldRemoveUserSuccessfully and 1 more.executor": "Run",
+    "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UserServiceTest.testCreateUser_ShouldSaveUserSuccessfully.executor": "Run",
+    "JUnit.UserServiceTest.testDeleteUser.executor": "Run",
+    "JUnit.UserServiceTest.testDeleteUser_ShouldRemoveUserSuccessfully.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Proyect2Application.executor": "Run",
+    "git-widget-placeholder": "feature/damo",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/diego/Proyecto-2/proyect2/proyect2/src/test/java",
+    "last_opened_file_path": "C:/Users/diego/Proyecto-2/back",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.7491369",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "ts.external.directory.path": "C:\\Users\\diego\\Downloads\\apps\\IntelliJ IDEA 2024.1.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql_aurora_aws&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora_aws"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\diego\Proyecto-2\front\proyecto2\src\components" />
@@ -98,13 +100,26 @@
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\diego\Proyecto-2" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\templates" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static\js" />
       <recent name="C:\Users\diego\Proyecto-2\proyect2\proyect2\src\main\resources\static\css" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Proyect2Application">
+  <component name="RunManager" selected="Application.Proyect2Application">
+    <configuration name="Proyect2Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.javeriana.proyect2.Proyect2Application" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.javeriana.proyect2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in Proyecto-2 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Proyecto-2" />
       <option name="PACKAGE_NAME" value="" />
@@ -117,21 +132,6 @@
       <module name="Proyecto-2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CalendarioServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="proyect2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.javeriana.proyect2.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.javeriana.proyect2.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.javeriana.proyect2.tests.CalendarioServiceIntegrationTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,6 +166,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="proyect2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="proyect2" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Proyect2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="proyect2" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.javeriana.proyect2.Proyect2Application" />
@@ -175,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Proyect2Application" />
         <item itemvalue="JUnit.UserServiceIntegrationTest" />
         <item itemvalue="JUnit.CalendarioServiceTest" />
         <item itemvalue="JUnit.All in Proyecto-2 (1)" />
         <item itemvalue="JUnit.All in Proyecto-2" />
-        <item itemvalue="JUnit.CalendarioServiceIntegrationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +223,12 @@
       <workItem from="1730121770085" duration="6142000" />
       <workItem from="1730691149517" duration="3597000" />
       <workItem from="1730947514721" duration="1209000" />
-      <workItem from="1731191497596" duration="51332000" />
+      <workItem from="1731191497596" duration="52878000" />
+      <workItem from="1731890862014" duration="128000" />
+      <workItem from="1731891022508" duration="107000" />
+      <workItem from="1731891150492" duration="46000" />
+      <workItem from="1731891234116" duration="232000" />
+      <workItem from="1731891533388" duration="1031000" />
     </task>
     <servers />
   </component>
@@ -232,7 +250,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceIntegrationTest.java</url>
+          <url>file://$PROJECT_DIR$/back/proyect2/proyect2/proyect2/src/test/java/com/javeriana/proyect2/tests/CalendarioServiceIntegrationTest.java</url>
           <line>18</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
