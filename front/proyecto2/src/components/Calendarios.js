@@ -9,16 +9,26 @@ function Calendarios({ setIsAuthenticated }) {
     const [loadingRecordatorio, setLoadingRecordatorio] = useState(null); // Estado para la carga de recordatorio
     const navigate = useNavigate();
 
+<<<<<<< HEAD
     // Función para obtener los calendarios desde la API
+=======
+    // Función para obtener los calendarios del usuario desde el backend
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
     const fetchCalendarios = async () => {
         setLoading(true);
         setError(null);
         try {
+<<<<<<< HEAD
             const userId = localStorage.getItem('userId');
+=======
+            const userId1 = localStorage.getItem('userId');
+            const userId = +userId1; // Asegurarse de convertir userId a número
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
             if (!userId) {
                 throw new Error("No se encontró un userId en el localStorage.");
             }
 
+<<<<<<< HEAD
             const response = await api.get(`/calendario/${userId}`);
             console.log("Respuesta de la API:", response.data);
 
@@ -34,10 +44,19 @@ function Calendarios({ setIsAuthenticated }) {
             setCalendarios([]);
         } finally {
             setLoading(false);
+=======
+            // Uso de backticks para interpolar userId en la URL
+            const response = await api.get(`/users/${userId}/calendarios`);
+            setCalendarios(response.data); // Guardar los calendarios en el estado
+        } catch (error) {
+            console.error("Error al obtener los calendarios:", error);
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
         }
     };
 
+    // Función para cerrar sesión
     const handleLogout = () => {
+<<<<<<< HEAD
         localStorage.removeItem('token');
         localStorage.removeItem('userId');
         setIsAuthenticated(false);
@@ -71,14 +90,19 @@ function Calendarios({ setIsAuthenticated }) {
         } finally {
             setLoadingRecordatorio(null); // Ocultar estado de carga
         }
+=======
+        navigate("/menu");
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
     };
 
+    // Obtener los calendarios cuando el componente se monta
     useEffect(() => {
         fetchCalendarios();
     }, []);
 
     return (
         <div>
+<<<<<<< HEAD
             <h1>Tus Calendarios</h1>
             <button onClick={handleLogout}>Cerrar Sesión</button>
             <button onClick={handleBack}>Volver</button>
@@ -120,6 +144,18 @@ function Calendarios({ setIsAuthenticated }) {
                     )}
                 </ul>
             )}
+=======
+            <h1>Crear Calendarios</h1>
+            {/* Formulario para crear nuevos calendarios */}
+            <CalendarForm fetchCalendarios={fetchCalendarios}/>
+            <ul>
+                {/* Lista de calendarios */}
+                {calendarios.map((calendar) => (
+                    <li key={calendar.id}>{calendar.name}</li>
+                ))}
+            </ul>
+            <button onClick={handleLogout}>Volver al Menú</button>
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
         </div>
     );
 }

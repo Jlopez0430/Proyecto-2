@@ -32,12 +32,37 @@ public class CalendarioController {
         }
     }
 
+<<<<<<< HEAD
     // Actualizar un evento con lógica para recordatorio
     @PutMapping("/{id}")
     public ResponseEntity<?> updateCalendario(
             @PathVariable Long id,
             @RequestBody Calendario updatedCalendario,
             @RequestParam boolean actualizarRecordatorio) {
+=======
+    // Obtener todos los calendarios
+    @GetMapping("/usuarios/{id}")
+    public ResponseEntity<?> getAllCalendarios(@PathVariable Long id) throws Exception {
+//        Calendario cal = new Calendario();
+//        cal.setName("a");
+//        cal.setImportancia("b");
+//        cal.setHora("c");
+//        cal.setFecha("d");
+//        cal.setDescripcion("e");
+//        cal.setUserid(id);
+//        // Obtener los calendarios filtrados por userid
+//        List<Calendario> calendarios = new ArrayList<>();
+//        calendarios.add(cal);
+        // Obtener los calendarios filtrados por userid
+        List<Calendario> calendarios = userService.getCalendariosByUserId(id);
+        return ResponseEntity.ok(calendarios);
+    }
+
+
+    // Obtener un calendario por ID
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getCalendarioById(@PathVariable Long id) {
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
         try {
             Calendario updated = calendarioService.updateCalendario(id, updatedCalendario, actualizarRecordatorio);
             return ResponseEntity.ok(updated);

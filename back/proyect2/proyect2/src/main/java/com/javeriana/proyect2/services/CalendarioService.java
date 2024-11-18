@@ -65,7 +65,14 @@ public class CalendarioService {
 
     // Eliminar un calendario (y su recordatorio si existe)
     public void deleteCalendario(Long id) throws Exception {
+<<<<<<< HEAD
         Calendario calendario = calendarioRepository.findById(id)
+=======
+
+        Calendario calendario = new Calendario();
+
+        calendario = calendarioRepository.findById(id)
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
                 .orElseThrow(() -> new Exception("Calendario no encontrado con ID: " + id));
 
         calendarioRepository.delete(calendario); // `orphanRemoval` asegura la eliminación del recordatorio
