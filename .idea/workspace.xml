@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b521ff49-531c-4964-a970-52d6ab104773" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/Recordatorio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/Calendario.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/proyect2/proyect2/src/main/java/com/javeriana/proyect2/model/Calendario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/CalendarForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/Calendarios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/proyecto2/src/components/VerCalendarios.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/proyecto2/src/components/VerCalendarios.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,8 +222,17 @@
       <workItem from="1730691149517" duration="3597000" />
       <workItem from="1730947514721" duration="1209000" />
       <workItem from="1731191497596" duration="51332000" />
-      <workItem from="1731871491552" duration="16055000" />
+      <workItem from="1731871491552" duration="17951000" />
     </task>
+    <task id="LOCAL-00001" summary="Agregamos recordatorios al back">
+      <option name="closed" value="true" />
+      <created>1731900476857</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731900476858</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +248,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Agregamos recordatorios al back" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregamos recordatorios al back" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

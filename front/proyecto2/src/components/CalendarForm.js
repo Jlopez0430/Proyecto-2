@@ -8,6 +8,7 @@ function CalendarForm({ fetchCalendarios }) {
     const [fecha, setFecha] = useState('');
     const [hora, setHora] = useState('');
     const [importancia, setImportancia] = useState('');
+    const [crearRecordatorio, setCrearRecordatorio] = useState(null); // Estado para manejar la creación del recordatorio
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -16,26 +17,33 @@ function CalendarForm({ fetchCalendarios }) {
             const userId = +userId1;
             if (!userId) {
                 throw new Error("No se encontró un userId en el localStorage. Inicie sesión nuevamente.");
-            } else{
-                console.log("si guarda");
-                // Refresca la lista de calendarios
-                console.log("falla aqui 1");
-                setName(name);
-                console.log("falla aqui 2", name);
-                setDescripcion(descripcion);
-                console.log("falla aqui 3", descripcion);
-                setFecha(fecha);
-                console.log("falla aqui 4", fecha);
-                setHora(hora);
-                console.log("falla aqui 5", hora);
-                setImportancia(importancia);
-                console.log("falla aqui 6", importancia);
-                 await api.post(`/calendario/${userId}`, { name, descripcion,fecha,hora, importancia });
-                 console.log("si sirve?")
             }
+
+            // Crear el calendario
+            const response = await api.post(`/calendario/${userId}`, { name, descripcion, fecha, hora, importancia });
+            console.log("Calendario creado:", response.data);
+
+            // Si el usuario selecciona "Sí", crear el recordatorio
+            if (crearRecordatorio) {
+                await api.post(`/recordatorio/${response.data.id}`);
+                alert("Recordatorio creado exitosamente.");
+            }
+
+            // Refrescar la lista de calendarios
+            fetchCalendarios();
+            alert("Calendario creado exitosamente.");
+
+            // Resetear formulario
+            setName('');
+            setDescripcion('');
+            setFecha('');
+            setHora('');
+            setImportancia('');
+            setCrearRecordatorio(null); // Resetear el estado del recordatorio
 
         } catch (error) {
             console.error("Error creating calendar:", error);
+            alert("Hubo un error al crear el calendario.");
         }
     };
 
@@ -46,6 +54,14 @@ function CalendarForm({ fetchCalendarios }) {
             <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} placeholder="Fecha" required />
             <input type="time" value={hora} onChange={(e) => setHora(e.target.value)} placeholder="Hora" required />
             <input type="text" value={importancia} onChange={(e) => setImportancia(e.target.value)} placeholder="Importancia" required />
+
+            {/* Preguntar si desea crear un recordatorio */}
+            <div>
+                <p>¿Crear recordatorio?</p>
+                <button type="button" onClick={() => setCrearRecordatorio(true)}>Sí</button>
+                <button type="button" onClick={() => setCrearRecordatorio(false)}>No</button>
+            </div>
+
             <button type="submit">Crear Calendario</button>
         </form>
     );
