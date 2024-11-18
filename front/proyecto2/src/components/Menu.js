@@ -1,17 +1,29 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
 import { useNavigate } from 'react-router-dom';
 
 function Menu({setIsAuthenticated}) {
+=======
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+function Menu({ setIsAuthenticated }) {
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
     const navigate = useNavigate();
     const [selectedOption, setSelectedOption] = useState('');
 
+    // Menú con todas las opciones de calendario
     const menuItems = [
         { name: "Crear Calendarios", path: "/calendarios" },
         { name: "Eliminar Calendarios", path: "/eliminar" },
         { name: "Actualizar Calendarios", path: "/act" },
         { name: "Ver Calendarios", path: "/vercalendarios" }
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
     ];
 
     const handleClick = (item) => {
@@ -30,6 +42,7 @@ function Menu({setIsAuthenticated}) {
         <div className="App">
             <h2>Menú de Opciones</h2>
             <div>
+                {/* Renderizamos las opciones del menú */}
                 {menuItems.map((item, index) => (
                     <button
                         key={index}
@@ -39,11 +52,17 @@ function Menu({setIsAuthenticated}) {
                         {item.name}
                     </button>
                 ))}
+<<<<<<< HEAD
+=======
+                {/* Opción para cerrar sesión */}
+>>>>>>> dcd405d575fc5dc1fdcbf9d61572cdf87029e359
                 <button onClick={handleLogout}>Cerrar Sesión</button>
             </div>
+            {/* Mostrar la opción seleccionada */}
             {selectedOption && <p>Has seleccionado: {selectedOption}</p>}
         </div>
     );
 }
 
 export default Menu;
+
