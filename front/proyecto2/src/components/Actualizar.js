@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api';
-import CalendarForm from './CalendarForm';
+import ActualizarForm from './ActualizarForm';
 import { useNavigate } from 'react-router-dom';
 
-function Calendarios({ setIsAuthenticated }) {
-    const [calendarios, setCalendarios] = useState([]);
+function Actualizar({ setIsAuthenticated }) {
+    const [actualizar, setActualizar] = useState([]);
     const navigate = useNavigate();
 
     // Función para obtener los calendarios del usuario desde el backend
-    const fetchCalendarios = async () => {
+    const fetchActualizar = async () => {
         try {
             const userId1 = localStorage.getItem('userId');
             const userId = +userId1; // Asegurarse de convertir userId a número
@@ -18,7 +18,7 @@ function Calendarios({ setIsAuthenticated }) {
 
             // Uso de backticks para interpolar userId en la URL
             const response = await api.get(`/users/${userId}/calendarios`);
-            setCalendarios(response.data); // Guardar los calendarios en el estado
+            setActualizar(response.data); // Guardar los calendarios en el estado
         } catch (error) {
             console.error("Error al obtener los calendarios:", error);
         }
@@ -31,18 +31,18 @@ function Calendarios({ setIsAuthenticated }) {
 
     // Obtener los calendarios cuando el componente se monta
     useEffect(() => {
-        fetchCalendarios();
+        fetchActualizar();
     }, []);
 
     return (
         <div>
-            <h1>Crear Calendarios</h1>
+            <h1>Actualizar Calendarios</h1>
             {/* Formulario para crear nuevos calendarios */}
-            <CalendarForm fetchCalendarios={fetchCalendarios}/>
+            <ActualizarForm fetchActualizar={fetchActualizar()}/>
             <ul>
                 {/* Lista de calendarios */}
-                {calendarios.map((calendar) => (
-                    <li key={calendar.id}>{calendar.name}</li>
+                {actualizar.map((actu) => (
+                    <li key={actu.id}>{actu.name}</li>
                 ))}
             </ul>
             <button onClick={handleLogout}>Volver al Menú</button>
@@ -50,4 +50,4 @@ function Calendarios({ setIsAuthenticated }) {
     );
 }
 
-export default Calendarios;
+export default Actualizar;

@@ -74,9 +74,9 @@ public class CalendarioService {
 
     // Nuevo método: Eliminar un calendario
     public void deleteCalendario(Long id) throws Exception {
-        User user1 = userService.getUserId(id);
-        Calendario calendario = user1.searchById(id);
-        user1.removeCalendario(calendario);
+
+        Calendario calendario = new Calendario();
+
         calendario = calendarioRepository.findById(id)
                 .orElseThrow(() -> new Exception("Calendario no encontrado con ID: " + id));
 

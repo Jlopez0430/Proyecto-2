@@ -60,9 +60,9 @@ public class CalendarioController {
 //        // Obtener los calendarios filtrados por userid
 //        List<Calendario> calendarios = new ArrayList<>();
 //        calendarios.add(cal);
-            // Obtener los calendarios filtrados por userid
-            List<Calendario> calendarios = userService.getCalendariosByUserId(id);
-            return ResponseEntity.ok(calendarios);
+        // Obtener los calendarios filtrados por userid
+        List<Calendario> calendarios = userService.getCalendariosByUserId(id);
+        return ResponseEntity.ok(calendarios);
     }
 
 

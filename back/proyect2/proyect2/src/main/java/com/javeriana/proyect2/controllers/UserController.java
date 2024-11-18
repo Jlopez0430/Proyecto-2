@@ -49,8 +49,8 @@ public class UserController {
 
     @PostMapping("users/{userId}")
     public ResponseEntity<?> getCalendarios(@PathVariable Long userId) {
-            List<Calendario> calendarios = userService.getCalendariosByUserId(userId);
-            return ResponseEntity.ok(calendarios);
+        List<Calendario> calendarios = userService.getCalendariosByUserId(userId);
+        return ResponseEntity.ok(calendarios);
     }
 
 //    @PostMapping("/{userId}/calendarios")
